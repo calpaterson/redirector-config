@@ -1,5 +1,5 @@
 {
-  "createdAt": "2021-10-28T08:33:24.516Z",
+  "createdAt": "2021-11-09T11:44:56.851Z",
   "createdBy": "Redirector v3.5.3",
   "redirects": [
     {
@@ -69,6 +69,23 @@
       "patternType": "R",
       "processMatches": "noProcessing",
       "redirectUrl": "https://archive.is/search/?q=$1"
+    },
+    {
+      "appliesTo": [
+        "image"
+      ],
+      "description": "imgur de-png",
+      "disabled": false,
+      "error": null,
+      "exampleResult": "https://i.imgur.com/VBh3ROS.webp",
+      "exampleUrl": "https://i.imgur.com/VBh3ROS.png",
+      "excludePattern": "",
+      "grouped": false,
+      "includePattern": "https://i.imgur.com/(.*).png",
+      "patternDesc": "",
+      "patternType": "R",
+      "processMatches": "noProcessing",
+      "redirectUrl": "https://i.imgur.com/$1.webp"
     }
   ]
 }
