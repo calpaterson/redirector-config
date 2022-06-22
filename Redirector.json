@@ -1,24 +1,7 @@
 {
-  "createdAt": "2022-06-02T13:13:08.520Z",
+  "createdAt": "2022-06-22T08:33:01.088Z",
   "createdBy": "Redirector v3.5.3",
   "redirects": [
-    {
-      "appliesTo": [
-        "main_frame"
-      ],
-      "description": "Medium -> Scribe",
-      "disabled": false,
-      "error": null,
-      "exampleResult": "https://scribe.rip/@user/post-123456abcdef",
-      "exampleUrl": "https://medium.com/@user/post-123456abcdef",
-      "excludePattern": "",
-      "grouped": false,
-      "includePattern": "https?://(?:.*)medium.com/(.*)",
-      "patternDesc": "",
-      "patternType": "R",
-      "processMatches": "noProcessing",
-      "redirectUrl": "https://scribe.rip/$1"
-    },
     {
       "appliesTo": [
         "main_frame"
@@ -40,6 +23,23 @@
       "appliesTo": [
         "main_frame"
       ],
+      "description": "Medium -> Scribe",
+      "disabled": false,
+      "error": null,
+      "exampleResult": "https://scribe.rip/@user/post-123456abcdef",
+      "exampleUrl": "https://medium.com/@user/post-123456abcdef",
+      "excludePattern": "",
+      "grouped": false,
+      "includePattern": "https?://(?:.*)medium.com/(.*)",
+      "patternDesc": "",
+      "patternType": "R",
+      "processMatches": "noProcessing",
+      "redirectUrl": "https://scribe.rip/$1"
+    },
+    {
+      "appliesTo": [
+        "main_frame"
+      ],
       "description": "ft -> archive.is",
       "disabled": false,
       "error": null,
@@ -48,6 +48,23 @@
       "excludePattern": "",
       "grouped": false,
       "includePattern": "(https://www.ft.com/.+)",
+      "patternDesc": "",
+      "patternType": "R",
+      "processMatches": "noProcessing",
+      "redirectUrl": "https://archive.is/search/?q=$1"
+    },
+    {
+      "appliesTo": [
+        "main_frame"
+      ],
+      "description": "telegraph -> archive.is",
+      "disabled": false,
+      "error": null,
+      "exampleResult": "https://archive.is/search/?q=https://www.telegraph.co.uk/business/2022/06/21/pensions-get-1000-boost-triple-lock-returns/",
+      "exampleUrl": "https://www.telegraph.co.uk/business/2022/06/21/pensions-get-1000-boost-triple-lock-returns/",
+      "excludePattern": "",
+      "grouped": false,
+      "includePattern": "(https://www.telegraph.co.uk/.+)",
       "patternDesc": "",
       "patternType": "R",
       "processMatches": "noProcessing",
@@ -74,35 +91,18 @@
       "appliesTo": [
         "image"
       ],
-      "description": "imgur de-png",
+      "description": "imgur {png,jpeg} -> webp",
       "disabled": false,
       "error": null,
       "exampleResult": "https://i.imgur.com/VBh3ROS.webp",
-      "exampleUrl": "https://i.imgur.com/VBh3ROS.png",
+      "exampleUrl": "https://i.imgur.com/VBh3ROS.jpg",
       "excludePattern": "",
       "grouped": false,
-      "includePattern": "https://i.imgur.com/(.*).png",
+      "includePattern": "https://i.imgur.com/(.*).(png|jpe?g)$",
       "patternDesc": "",
       "patternType": "R",
       "processMatches": "noProcessing",
       "redirectUrl": "https://i.imgur.com/$1.webp"
-    },
-    {
-      "appliesTo": [
-        "main_frame"
-      ],
-      "description": "Reddit -> Old Reddit",
-      "disabled": false,
-      "error": null,
-      "exampleResult": "https://old.reddit.com/r/Python/",
-      "exampleUrl": "https://www.reddit.com/r/Python/",
-      "excludePattern": "",
-      "grouped": false,
-      "includePattern": "https?://www.reddit.com/(.*)",
-      "patternDesc": "",
-      "patternType": "R",
-      "processMatches": "noProcessing",
-      "redirectUrl": "https://old.reddit.com/$1"
     }
   ]
 }
